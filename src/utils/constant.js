@@ -20,7 +20,10 @@ import ArrowBackIosNewRoundedIcon from "@mui/icons-material/ArrowBackIosNewRound
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import NotificationsNoneRoundedIcon from "@mui/icons-material/NotificationsNoneRounded";
 import TimerOutlinedIcon from "@mui/icons-material/TimerOutlined";
-
+import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlined";
+import ReplayOutlinedIcon from "@mui/icons-material/ReplayOutlined";
+import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
+import DesktopWindowsOutlinedIcon from "@mui/icons-material/DesktopWindowsOutlined";
 export const ICONS = {
   HomeIcon,
   PlaylistPlayIcon,
@@ -44,4 +47,8 @@ export const ICONS = {
   ArrowForwardIosRoundedIcon,
   NotificationsNoneRoundedIcon,
   TimerOutlinedIcon,
+  ReplayOutlinedIcon,
+  FullscreenExitOutlinedIcon,
+  ListOutlinedIcon,
+  DesktopWindowsOutlinedIcon,
 };

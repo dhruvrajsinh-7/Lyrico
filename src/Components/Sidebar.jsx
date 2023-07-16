@@ -7,7 +7,6 @@ function Sidebar() {
   const Search = ICONS.SearchSharpIcon;
   const Library = ICONS.MenuBookIcon;
   const Playlist = ICONS.PlaylistPlayIcon;
-  const LikesSongs = ICONS.FavoriteBorderOutlinedIcon;
   const Artist = ICONS.HeadsetTwoToneIcon;
   const Songs = ICONS.MusicNoteOutlinedIcon;
   const MusicVideo = ICONS.OndemandVideoSharpIcon;
@@ -15,8 +14,20 @@ function Sidebar() {
   const Logout = ICONS.ExitToAppSharpIcon;
 
   return (
-    <div className="flex flex-col w-full h-screen text-[#CACACA] p-5 text-sm bg-gradient-to-b from-[#3E3E3E] via-[#5A4553] to-[#151515]">
-      <div className="flex flex-col space-y-4">
+    <div
+      className=" flex  h-screen text-[#CACACA] text-sm"
+      style={{
+        background:
+          "linear-gradient(270deg, hsla(0, 81%, 27%, 1) 2%, hsla(240, 12%, 16%, 1) 100%)",
+        backgroundImage:
+          "-moz-linear-gradient(270deg, hsla(0, 81%, 27%, 1) 2%, hsla(240, 12%, 16%, 1) 100%)",
+        backgroundImage:
+          "-webkit-linear-gradient(20deg, hsla(0, 81%, 27%, 1) 2%, hsla(240, 12%, 16%, 1) 100%)",
+        filter:
+          "progid: DXImageTransform.Microsoft.gradient( startColorstr='#7B0D0D', endColorstr='#24242E', GradientType=1 )",
+      }}
+    >
+      <div className="flex px-8 flex-col space-y-4 border-r">
         <button className="flex items-center space-x-2 mt-8 hover:text-white">
           <img className="h-full w-40" src={Logo} alt="Logo" />
         </button>
@@ -71,7 +82,6 @@ function Sidebar() {
           <p>Log out</p>
         </button>
       </div>
-      <div className="border-l border-gray-900 h-full"></div>
     </div>
   );
 }

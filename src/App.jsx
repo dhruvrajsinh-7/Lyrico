@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
+import Musicplayer from "./Components/featured_components/MusicPlayer";
 function App() {
   return (
     <>
@@ -8,6 +9,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
+        <Musicplayer />
       </BrowserRouter>
     </>
   );
