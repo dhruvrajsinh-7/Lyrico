@@ -2,14 +2,16 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 import Musicplayer from "./featured_components/MusicPlayer";
+
 const Home = () => {
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row min-h-screen">
       <Sidebar />
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full flex-1">
         <Navbar />
-        <div className="flex-grow bg-gray-100">feed</div>
+        {/* Add the main content here */}
       </div>
+      <Musicplayer />
     </div>
   );
 };

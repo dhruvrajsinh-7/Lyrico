@@ -14,34 +14,22 @@ function Sidebar() {
   const Logout = ICONS.ExitToAppSharpIcon;
 
   return (
-    <div
-      className=" flex  h-screen text-[#CACACA] text-sm"
-      style={{
-        background:
-          "linear-gradient(270deg, hsla(0, 81%, 27%, 1) 2%, hsla(240, 12%, 16%, 1) 100%)",
-        backgroundImage:
-          "-moz-linear-gradient(270deg, hsla(0, 81%, 27%, 1) 2%, hsla(240, 12%, 16%, 1) 100%)",
-        backgroundImage:
-          "-webkit-linear-gradient(20deg, hsla(0, 81%, 27%, 1) 2%, hsla(240, 12%, 16%, 1) 100%)",
-        filter:
-          "progid: DXImageTransform.Microsoft.gradient( startColorstr='#7B0D0D', endColorstr='#24242E', GradientType=1 )",
-      }}
-    >
-      <div className="flex px-8 flex-col space-y-4 border-r">
+    <div className=" flex text-[#9B9B9B]  text-sm">
+      <div className="flex px-14 flex-col space-y-4 border-r">
         <button className="flex items-center space-x-2 mt-8 hover:text-white">
           <img className="h-full w-40" src={Logo} alt="Logo" />
         </button>
-        <div className="w-32">
+        <div className="w-40">
           <button className=" mt-8 mb-4 w-full text-xs border border-gray-300 focus:border-gray-500 transition-all duration-300 outline-none rounded-full flex items-center">
             <Search className="h-5 w-5 mx-2" />
             <input
               type="text"
               placeholder="Search"
-              className="outline-none bg-transparent flex-grow p-2"
+              className="outline-none bg-transparent text-white flex-grow p-2"
             />
           </button>
         </div>
-        <h1 className="text-[#E8E8E8] mt-40">Menu</h1>
+        <h1 className="text-[#E8E8E8] ">Menu</h1>
 
         <button className="flex items-center space-x-2 hover:text-white ">
           <HomeIcon className="h-5 w-5" />
