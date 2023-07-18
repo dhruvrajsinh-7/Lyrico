@@ -1,6 +1,7 @@
 import React from "react";
 import { ICONS } from "../utils/constant";
 import { Logo } from "../assets";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   const HomeIcon = ICONS.HomeIcon;
@@ -27,6 +28,7 @@ function Sidebar() {
               placeholder="Search"
               className="outline-none bg-transparent text-white flex-grow p-2"
             />
+            z
           </button>
         </div>
         <h1 className="text-[#E8E8E8] ">Menu</h1>
@@ -47,11 +49,12 @@ function Sidebar() {
         </button>
 
         <h1 className="text-[#E8E8E8] mt-[200px]">Library</h1>
-
-        <button className="flex items-center space-x-2 hover:text-white">
-          <Library className="h-5 w-5" />
-          <p>Albums</p>
-        </button>
+        <Link to="/albums">
+          <button className="flex items-center space-x-2 hover:text-white">
+            <Library className="h-5 w-5" />
+            <p>Albums</p>
+          </button>
+        </Link>
         <button className="flex items-center space-x-2 hover:text-white">
           <Songs className="h-5 w-5" />
           <p>Songs</p>
