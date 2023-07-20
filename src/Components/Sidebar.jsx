@@ -15,7 +15,7 @@ function Sidebar() {
   const Logout = ICONS.ExitToAppSharpIcon;
 
   return (
-    <div className=" flex text-[#9B9B9B]  text-sm">
+    <div className="h-full w-1/5 flex  text-[#9B9B9B]  text-sm">
       <div className="flex px-14 flex-col space-y-4 border-r">
         <button className="flex items-center space-x-2 mt-8 hover:text-white">
           <img className="h-full w-40" src={Logo} alt="Logo" />
@@ -49,11 +49,12 @@ function Sidebar() {
         </button>
 
         <h1 className="text-[#E8E8E8] mt-[200px]">Library</h1>
-        <Link to="/albums">
-          <button className="flex items-center space-x-2 hover:text-white">
-            <Library className="h-5 w-5" />
-            <p>Albums</p>
-          </button>
+        <Link
+          className="flex items-center space-x-2 hover:text-white"
+          to="/albums"
+        >
+          <Library className="h-5 w-5" />
+          <p>Albums</p>
         </Link>
         <button className="flex items-center space-x-2 hover:text-white">
           <Songs className="h-5 w-5" />
