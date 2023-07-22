@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Shimmer from "../Shimmer";
 import Card from "./Card";
 import AlbumsCard from "./AlbumCard";
+import Home from "../Home.jsx";
 const cardsData = [
   {
     title: "Card title",

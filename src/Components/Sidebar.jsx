@@ -28,15 +28,14 @@ function Sidebar() {
               placeholder="Search"
               className="outline-none bg-transparent text-white flex-grow p-2"
             />
-            z
           </button>
         </div>
         <h1 className="text-[#E8E8E8] ">Menu</h1>
 
-        <button className="flex items-center space-x-2 hover:text-white ">
+        <Link to="/" className="flex items-center space-x-2 hover:text-white ">
           <HomeIcon className="h-5 w-5" />
           <p>Home</p>
-        </button>
+        </Link>
 
         <button className="flex items-center space-x-2 hover:text-white">
           <Playlist className="h-5 w-5" />
