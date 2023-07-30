@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Shimmer from "../Shimmer";
 import Card from "./Card";
 import AlbumsCard from "./AlbumCard";
-import Home from "../Home.jsx";
 const cardsData = [
   {
     title: "Card title",
@@ -31,6 +30,7 @@ const cardsData = [
 ];
 const Feed = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const timer = setTimeout(() => {

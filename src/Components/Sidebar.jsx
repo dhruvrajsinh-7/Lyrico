@@ -55,10 +55,13 @@ function Sidebar() {
           <Library className="h-5 w-5" />
           <p>Albums</p>
         </Link>
-        <button className="flex items-center space-x-2 hover:text-white">
+        <Link
+          to="/mysongs"
+          className="flex items-center space-x-2 hover:text-white"
+        >
           <Songs className="h-5 w-5" />
           <p>Songs</p>
-        </button>
+        </Link>
         <button className="flex items-center space-x-2 hover:text-white">
           <MusicVideo className="h-5 w-5" />
           <p>Music Video</p>

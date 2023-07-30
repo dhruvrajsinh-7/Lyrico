@@ -1,10 +1,10 @@
 import CloudinaryUpload from "../Helper/CloudinaryUpload";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import { HTTPsecurePOSTRequest } from "../../services/API";
+import { toast } from "react-toastify";
 const AddSong = () => {
-  const [name, setName] = useState("");
+  const [songname, setSongName] = useState("");
   const [thumbnail, setThumbnail] = useState("");
   const [playlistUrl, setPlaylistUrl] = useState("");
   const [uploadedSongFileName, setUploadedSongFileName] = useState();
@@ -17,7 +17,8 @@ const AddSong = () => {
       alert("Could not create song");
       return;
     }
-    navigate("/home");
+    toast.success("Song added Successfully");
+    navigate("/");
   };
   return (
     <>
@@ -29,17 +30,17 @@ const AddSong = () => {
           <h1 className="text-[#C56EFB] font-semibold">name</h1>
           <input
             type="text"
-            name="name"
-            className=" bg-transparent  border-b-2 border-[#C56EFB]  rounded-full px-4  py-2 mb-3"
+            name="songname"
+            className=" bg-transparent text-white border-b-2 border-[#C56EFB]  rounded-full px-4  py-2 mb-3"
             placeholder="Enter Songname"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={songname}
+            onChange={(e) => setSongName(e.target.value)}
           />
           <h1 className="text-[#C56EFB] font-semibold">Thumbnail</h1>
           <input
             type="text"
             name="thumbnail"
-            className=" bg-transparent  border-b-2 border-[#C56EFB]   rounded-full px-4 py-2 mb-3"
+            className=" bg-transparent text-white border-b-2 border-[#C56EFB]   rounded-full px-4 py-2 mb-3"
             placeholder="Enter Thumbnail URL"
             value={thumbnail}
             onChange={(e) => setThumbnail(e.target.value)}

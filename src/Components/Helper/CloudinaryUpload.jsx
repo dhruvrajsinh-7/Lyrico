@@ -1,11 +1,14 @@
+import { REACT_APP_UPLOAD_PRESET, REACT_APP_CLOUDNAME } from "../data/config";
 import { openUploadWidget } from "../../utils/Cloudinarysetup";
 const CloudinaryUpload = ({ setUrl, setName }) => {
+  const clouname = REACT_APP_CLOUDNAME;
+  const preset = REACT_APP_UPLOAD_PRESET;
   const uploadImageWidget = () => {
     let myUploadWidget = openUploadWidget(
       {
-        cloudName: "dscv3til8",
-        uploadPreset: "Lyrico",
-        sources: ["local"],
+        cloudName: clouname,
+        uploadPreset: preset,
+        sources: ["local", "url", "dropbox", "instagram"],
       },
       function (error, result) {
         if (!error && result.event === "success") {

@@ -34,24 +34,22 @@ export const HTTPsecurePOSTRequest = async (route, body) => {
       },
     });
     return response.data;
-  } catch (error) {
-    throw error;
+  } catch (err) {
+    throw err;
   }
 };
 
 export const HTTPsecureGETRequest = async (route) => {
-  try {
-    const token = getToken();
-    const response = await axios.get(API_URL + route, {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
+  const token = getToken();
+  const response = await axios.get(API_URL + route, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  const formattedResponse = await response.data;
+  console.log(formattedResponse);
+  return formattedResponse;
 };
 
 const getToken = () => {
