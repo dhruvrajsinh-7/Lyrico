@@ -9,7 +9,7 @@ const Mysongs = () => {
   const fetchSongs = async () => {
     try {
       const response = await HTTPsecureGETRequest("/song/get/mysongs");
-      setSongs(response); // No need to extract data again, as it's already done in the API function
+      setSongs(response);
       setLoading(false);
       console.log("Songs:", response);
     } catch (error) {
