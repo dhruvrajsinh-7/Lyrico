@@ -35,7 +35,7 @@ const Mysongs = () => {
       <h1 className="text-4xl text-white font-bold">My Songs</h1>
       <div>
         {songs.map((song) => (
-          <SongCard key={song._id} data={song} playSound={() => {}} />
+          <SongCard key={song._id} data={song} />
         ))}
       </div>
     </div>

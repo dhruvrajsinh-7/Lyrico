@@ -23,11 +23,13 @@ import TimerOutlinedIcon from "@mui/icons-material/TimerOutlined";
 import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlined";
 import ReplayOutlinedIcon from "@mui/icons-material/ReplayOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
+import PauseCircleFilledSharpIcon from "@mui/icons-material/PauseCircleFilledSharp";
 import DesktopWindowsOutlinedIcon from "@mui/icons-material/DesktopWindowsOutlined";
 export const ICONS = {
   HomeIcon,
   PlaylistPlayIcon,
   HeadsetTwoToneIcon,
+  PauseCircleFilledSharpIcon,
   MenuBookIcon,
   MusicNoteOutlinedIcon,
   OndemandVideoSharpIcon,

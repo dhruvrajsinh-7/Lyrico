@@ -1,7 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { setCurrentSong } from "../../utils/songslice";
 
-const SongCard = ({ data, playSound }) => {
+const SongCard = ({ data }) => {
   const dispatch = useDispatch();
   const currentSong = useSelector((state) => state.song.currentSong);
 
@@ -9,7 +10,6 @@ const SongCard = ({ data, playSound }) => {
     dispatch(setCurrentSong(data));
   };
 
-  console.log("Thumbnail URL:", data.thumbnail);
   return (
     <div
       className="flex bg-transparent p-2 rounded-md"
@@ -20,7 +20,6 @@ const SongCard = ({ data, playSound }) => {
         style={{
           backgroundImage: `url("${data.thumbnail}")`,
         }}
-        // Inside SongCard component
       ></div>
       <div className="flex w-full">
         <div className="text-white flex justify-center  flex-col pl-4 w-5/6">
