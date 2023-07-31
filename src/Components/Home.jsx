@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 import { Howl, Howler } from "howler";
-import MusicPlayer from "./featured_components/MusicPlayer";
+import MusicPlayer from "../featured_components/Musicplayer";
 import { useDispatch, useSelector } from "react-redux";
 import { setIsPaused, setSoundPlayed } from "../utils/songslice";
 

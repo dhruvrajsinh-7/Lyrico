@@ -2,18 +2,6 @@ const API_URL = "http://localhost:3000";
 import { data } from "autoprefixer";
 import axios from "axios";
 
-// export const HTTPunsecurePOSTRequest = async (route, data) => {
-//   try {
-//     const response = await axios.post(API_URL + route, data, {
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//     });
-//     return response.data;
-//   } catch (error) {
-//     throw error;
-//   }
-// };
 export const HTTPunsecurePOSTRequest = async (route, data) => {
   const response = await axios.post(API_URL + route, data, {
     headers: {
