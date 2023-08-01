@@ -1,17 +1,11 @@
 import { useSelector } from "react-redux";
 import { useState } from "react";
-export const formatTime = (timeInSeconds) => {
-  const soundPlayed = useSelector((state) => state.song.soundPlayed);
-  if (!soundPlayed || soundPlayed.duration() === null) {
-    return "00:00";
+export const formatTime = (time, soundPlayed) => {
+  if (soundPlayed && soundPlayed.duration() !== null) {
+    const duration = soundPlayed.duration();
+    return new Date(duration * 1000).toISOString().slice(11, 19);
   }
-
-  const minutes = Math.floor(timeInSeconds / 60);
-  const seconds = Math.floor(timeInSeconds % 60);
-  return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(
-    2,
-    "0"
-  )}`;
+  return new Date(time * 1000).toISOString().slice(11, 19);
 };
 export const useVolume = (initialVolume = 1) => {
   const [volumeLevel, setVolumeLevel] = useState(initialVolume);

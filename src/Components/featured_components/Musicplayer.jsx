@@ -45,13 +45,9 @@ const Musicplayer = () => {
       html5: true,
     });
     dispatch(setSoundPlayed(sound));
+    setSoundPlayed(sound);
     sound.play();
     dispatch(setIsPaused(false));
-  };
-  const updateProgress = () => {
-    if (soundPlayed?.duration() !== null) {
-      setProgress(soundPlayed.seek() || 0);
-    }
   };
 
   useLayoutEffect(() => {
@@ -69,6 +65,11 @@ const Musicplayer = () => {
     }
   };
   useEffect(() => {
+    const updateProgress = () => {
+      if (soundPlayed?.duration() !== null) {
+        setProgress(soundPlayed.seek() || 0);
+      }
+    };
     if (soundPlayed) {
       soundPlayed.on("play", () => {
         const interval = setInterval(updateProgress, 100);
@@ -89,6 +90,10 @@ const Musicplayer = () => {
     if (soundPlayed) {
       soundPlayed.volume(newVolume);
     }
+  };
+  const addtoplaylist = () => {
+    console.log("add to playlist");
+    alert("add to playlist");
   };
   return (
     <footer className="fixed bottom-0 left-0 right-0 bg-[#313030] px-2 md:px-10 py-2 md:py-3 flex items-center justify-between text-white">
@@ -147,12 +152,17 @@ const Musicplayer = () => {
                 ></div>
               </div>
               <span className="text-sm">
-                {formatTime(soundPlayed.duration())}
+                {formatTime(progress, soundPlayed)}
               </span>
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <List className="h-6 w-6" />
+            <List
+              className="h-6 w-6 curser-pointer"
+              onClick={() => {
+                setPlaylistModalOpen(true);
+              }}
+            />
             <Desktop className="h-6 w-6" />
             <Mic className="h-6 w-6" />
             <div className="flex items-center gap-2">

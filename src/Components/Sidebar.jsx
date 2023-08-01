@@ -17,9 +17,12 @@ function Sidebar() {
   return (
     <div className="h-full w-1/5 flex  text-[#9B9B9B]  text-sm">
       <div className="flex px-14 flex-col space-y-4 border-r">
-        <button className="flex items-center space-x-2 mt-8 hover:text-white">
+        <Link
+          to="/"
+          className="flex items-center space-x-2 mt-8 hover:text-white"
+        >
           <img className="h-full w-40" src={Logo} alt="Logo" />
-        </button>
+        </Link>
         <div className="w-40">
           <button className=" mt-8 mb-4 w-full text-xs border border-gray-300 focus:border-gray-500 transition-all duration-300 outline-none rounded-full flex items-center">
             <Search className="h-5 w-5 mx-2" />
