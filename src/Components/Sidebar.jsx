@@ -40,10 +40,13 @@ function Sidebar() {
           <p>Home</p>
         </Link>
 
-        <button className="flex items-center space-x-2 hover:text-white">
+        <Link
+          to="/playlist"
+          className="flex items-center space-x-2 hover:text-white"
+        >
           <Playlist className="h-5 w-5" />
           <p>Playlist</p>
-        </button>
+        </Link>
 
         <button className="flex items-center space-x-2 hover:text-white">
           <Artist className="h-5 w-5" />

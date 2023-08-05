@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import AddSong from "./Components/Pages/AddSong";
 import Albums from "./Components/Pages/albums";
 import Mysongs from "./Components/Pages/Mysongs";
+import Playlist from "./Components/Pages/Playlist";
 function App() {
   return (
     <>
@@ -36,7 +37,14 @@ function App() {
               </Home>
             }
           />
-
+          <Route
+            path="/Playlist"
+            element={
+              <Home>
+                <Playlist />
+              </Home>
+            }
+          />
           <Route
             path="/mysongs"
             element={

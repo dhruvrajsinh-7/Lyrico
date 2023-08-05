@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HTTPsecurePOSTRequest } from "../../services/API";
 
 const CreatePlaylist = ({ closeModal }) => {
@@ -18,7 +18,7 @@ const CreatePlaylist = ({ closeModal }) => {
 
   return (
     <div
-      className="absolute bg-black w-screen h-screen bg-opacity-50 flex justify-center items-center"
+      className="absolute top-40 left-80 h-[500px] w-[1200px] bg-black  bg-opacity-90 flex justify-center items-center"
       onClick={closeModal}
     >
       <div
@@ -27,7 +27,7 @@ const CreatePlaylist = ({ closeModal }) => {
           e.stopPropagation();
         }}
       >
-        <div className="text-white mb-5 font-semibold text-lg">
+        <div className="text-white mb-5 text-center text-3xl font-semibold ">
           Create Playlist
         </div>
         <div className="space-y-4 flex flex-col justify-center items-center">
