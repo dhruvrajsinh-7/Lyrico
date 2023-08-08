@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HTTPsecurePOSTRequest } from "../../services/API";
-
+import CloudinaryUpload from "../Helper/CloudinaryUpload";
 const CreatePlaylist = ({ closeModal }) => {
   const [playlistName, setPlaylistName] = useState("");
   const [playlistThumbnail, setPlaylistThumbnail] = useState("");
@@ -18,7 +18,7 @@ const CreatePlaylist = ({ closeModal }) => {
 
   return (
     <div
-      className="absolute top-40 left-80 h-[500px] w-[1200px] bg-black  bg-opacity-90 flex justify-center items-center"
+      className="absolute top-40 left-80 h-[500px] w-[1200px] bg-black bg-opacity-90 z-40 flex justify-center items-center"
       onClick={closeModal}
     >
       <div
@@ -36,17 +36,16 @@ const CreatePlaylist = ({ closeModal }) => {
             name="name"
             value={playlistName}
             onChange={(e) => setPlaylistName(e.target.value)}
-            className=" bg-transparent  border-b-2 border-[#C56EFB] text-white rounded-full px-4  py-2 mb-4"
+            className="bg-transparent border-b-2 border-[#C56EFB] text-white rounded-full px-4 py-2 mb-4"
             placeholder="Playlist Name"
           />
-          <input
-            type="text"
-            name="thumbnail"
-            placeholder="Thumbnail"
-            value={playlistThumbnail}
-            onChange={(e) => setPlaylistThumbnail(e.target.value)}
-            className="bg-transparent  border-b-2 border-[#C56EFB] text-white rounded-full px-4  py-2 mb-4"
-          />
+          <div className="flex flex-col items-center">
+            <CloudinaryUpload
+              setUrl={playlistThumbnail}
+              setName={playlistName}
+              type={"image"}
+            />
+          </div>
           <div
             className="bg-white w-1/3 rounded flex font-semibold justify-center items-center py-3 mt-4 cursor-pointer"
             onClick={createPlaylist}

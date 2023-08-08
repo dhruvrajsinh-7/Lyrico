@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Shimmer from "../Shimmer";
-import Card from "./Card";
-import AlbumsCard from "./AlbumCard";
+import Card from "../featured_components/Card";
+import AlbumsCard from "../featured_components/AlbumCard";
 const cardsData = [
   {
     title: "Card title",

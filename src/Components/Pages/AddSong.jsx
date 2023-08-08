@@ -56,6 +56,7 @@ const AddSong = () => {
           <CloudinaryUpload
             setUrl={setPlaylistUrl}
             setName={setUploadedSongFileName}
+            type={"audio"}
           />
         )}
       </div>

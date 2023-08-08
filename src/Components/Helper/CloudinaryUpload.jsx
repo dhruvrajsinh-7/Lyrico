@@ -1,12 +1,11 @@
-// import { REACT_APP_UPLOAD_PRESET, REACT_APP_CLOUDNAME } from "../data/config";
 import { openUploadWidget } from "../../utils/Cloudinarysetup";
-const CloudinaryUpload = ({ setUrl, setName }) => {
-  const clouname = import.meta.env.VITE_CLOUDNAME;
+const CloudinaryUpload = ({ setUrl, setName, type }) => {
+  const cloudname = import.meta.env.VITE_CLOUDNAME;
   const preset = import.meta.env.VITE_UPLOAD_PRESET;
   const uploadImageWidget = () => {
     let myUploadWidget = openUploadWidget(
       {
-        cloudName: clouname,
+        cloudName: cloudname,
         uploadPreset: preset,
         sources: ["local", "url", "dropbox", "instagram"],
       },
@@ -16,6 +15,7 @@ const CloudinaryUpload = ({ setUrl, setName }) => {
           setName(result.info.original_filename);
         } else {
           if (error) {
+            console.log("error");
             console.log(error);
           }
         }
@@ -24,12 +24,22 @@ const CloudinaryUpload = ({ setUrl, setName }) => {
     myUploadWidget.open();
   };
 
+  if (type === "audio") {
+    return (
+      <button
+        className="bg-white text-black rounded-full p-4 font-semibold"
+        onClick={uploadImageWidget}
+      >
+        Select Track
+      </button>
+    );
+  }
   return (
     <button
-      className="bg-white text-black  rounded-full p-4 font-semibold"
+      className="bg-white text-black rounded-full p-4 font-semibold"
       onClick={uploadImageWidget}
     >
-      Select Track
+      Select Thumbnail
     </button>
   );
 };
